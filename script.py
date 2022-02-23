@@ -53,6 +53,8 @@ def remove_files(folder):
             if name not in end_arr:
                 deleted.append(fullname)
                 os.remove(fullname)
+            else:
+                end_arr.remove(name)
         elif os.path.isdir(fullname):
             dirs.append(fullname)
     return dirs
